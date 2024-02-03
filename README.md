@@ -1,4 +1,4 @@
 # CodeForces01
-level 1 < for newcomers > in Assuit Uninversity Trainingg sheet
+level 1 <newcomers> in Assuit Uninversity Training sheet
 
 https://codeforces.com/group/MWSDmqGsZm/contests

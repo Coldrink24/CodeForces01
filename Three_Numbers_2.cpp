@@ -1,27 +1,36 @@
 #include <iostream>
 using namespace std;
+int min(int a, int b){
+    int Min;
+    if (a < b) Min = a;
+    else Min = b;
 
-int main(){
+    return Min;
+}
+int main()
+{
 
+    int K,Sum, rest;
+    cin >> K >> Sum;
+    int Min = min(K,Sum);
+    int count = 0;
 
-    int N = 4;
-    cin >> N;
-
-    //print N sentences => N = 4
-
-    for(int i = 1 ; i < 2*N ; i+=2) // i = 1 : 7 ...... i = 1, 3, 5 ,7
+    //number of available digits
+    for(int i = 0; i <= Min ; i++)
     {
-        for(int j = N + (N - 3); j >= i ; j -= 2 )  // j = 5 : 1 ..... j = 5,3,1
-        {                                           //  j = 5 : 3 .... j = 5,3
-            cout << " ";
-        }
-
-        for(int j = 0; j < i ; j++) // j = 0
+        for(int j = 0; j <= Min; j++)
         {
-            cout << "*";
+            rest = Sum - j - i;
+            if(rest >= 0 && rest <= K )
+            {
+                count++;
+                rest = 0;
+            }
+            else
+                continue;
         }
-        cout << endl;
     }
+    cout << count;
 
     return 0;
 }

@@ -2,7 +2,7 @@
 using namespace std;
 
 int main()
-{
+{ 
     int N, K;
     long long defmin = 1000000000, min, num;
 

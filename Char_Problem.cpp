@@ -18,3 +18,17 @@ int main() {
 
     return 0;
 }
+
+-------------------------------------------------------------
+   
+#include <iostream>
+using namespace std;
+int main(){
+    char X;
+    cin >> X;
+    int mynum = int(X);
+    (mynum >= 97)? cout << char(mynum - 32): cout << char(mynum + 32);
+
+
+    return 0;
+}

@@ -49,3 +49,42 @@ int main (){
     }
     return 0;
 }
+
+-------------------------------------------------------------
+
+#include <iostream>
+
+
+using namespace std;
+int main(){
+
+    int A, B, counter = 0;
+    bool lucky = false;
+    cin >> A >> B;
+
+    for(int i = A; i <= B ; i++)
+    {
+        string str = to_string(i);
+        int N = str.size();
+        for(int j = 0; j < N; j++){
+
+            if(str[j] == '4' || str[j] == '7'){
+                lucky = true;
+                continue;
+            }
+            else{
+                lucky = false;
+                break;
+            }
+        }
+        if (lucky) {
+            cout << i << " ";
+            counter++;
+        }
+
+     }
+    if(counter == 0) cout << -1;
+
+    return 0;
+}
+

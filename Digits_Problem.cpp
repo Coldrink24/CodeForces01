@@ -66,3 +66,34 @@ int main() {
     }
     return 0;
 }
+--------------------------------------------------
+#include <iostream>
+#include <algorithm>
+ 
+using namespace std;
+int main(){
+ 
+   int T;
+   string N, newN;
+ 
+   cin >> T;
+ 
+   for(int i = 0 ; i < T ; i++){
+ 
+       cin >> N;
+       newN = N + N;
+       reverse(N.begin(), N.end());
+       for(int j = 0; j < N.size()*2  ; j++)
+       {
+          if(j%2 ==0)
+          {
+              newN[j] = N[j/2];
+          }
+          else
+              newN[j] = ' ';
+       }
+       cout << newN << endl;
+ 
+   }
+    return 0;
+}

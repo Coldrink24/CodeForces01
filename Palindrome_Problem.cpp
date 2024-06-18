@@ -56,3 +56,22 @@ int main() {
     return 0;
 
 }
+
+-----------------------------------------------------
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+ 
+    string N, X;
+    cin >> N;
+    X = N;
+ 
+ 
+    reverse(N.begin(),N.end());
+ 
+    cout << stoi(N) << endl;
+    (N == X)? cout << "YES": cout << "NO";
+ 
+    return 0;
+}
